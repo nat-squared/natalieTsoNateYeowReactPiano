@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+audio {
+  height: 50px;
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  background-color: #444;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  height: 18.875em;
+  width: 30em;
+  margin: 5em auto;
+  padding: 3em 3em 0;
+  position: relative;
+  background-color: black;
+  border-radius: 22px;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+.whiteKey {
+  height: 16em;
+  width: 3em;
+  z-index: 1;
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+}
+.whiteKey:active {
+  background: linear-gradient(
+    to right,
+    rgb(243, 243, 243) 0%,
+    rgb(206, 204, 204) 100%
+  );
+}
+.blackKey {
+  height: 10em;
+  width: 2em;
+  margin: 0 0 0 -1em;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
   color: white;
+  background: #444;
 }
-
-.App-link {
-  color: #61dafb;
+.blackKey:active {
+  background: linear-gradient(to right, #444 0%, #222 100%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#D4,
+#E4,
+#G4,
+#A4,
+#B4 {
+  margin: 0 0 0 -1em;
+}
+ul li:first-child {
+  border-radius: 5px 0 5px 5px;
+}
+ul li:last-child {
+  border-radius: 0 5px 5px 5px;
 }
