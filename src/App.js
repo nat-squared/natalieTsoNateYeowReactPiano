@@ -2,6 +2,7 @@ import './App.css';
 import firebase from "./firebase.js";
 import { useState, useEffect } from "react";
 import { BlackKey, WhiteKey } from "./Keyboard.js"
+
 const keybindings = [
   "a",
   "w",
@@ -17,11 +18,17 @@ const keybindings = [
   "j",
   "k",
 ];
+
+
 function App() {
+
   const [one, setOne] = useState([]);
+
+  
   useEffect( () => {
     async function fetchMyFirebase() {
       const storage = firebase.storage();
+
       const files = [
         "C4.mp3",
         "Csharp4.mp3",
@@ -37,7 +44,9 @@ function App() {
         "B4.mp3",
         "C5.mp3"
       ];
+
       const filesUrls = [];
+
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const url = await storage
@@ -52,10 +61,12 @@ function App() {
     };
     fetchMyFirebase();
   }, []);
+
   // RETURN ==========================================
   return (
     <div className="App">
       <h1>Piano</h1>
+
       <ul>
         {one.map( (note, i) => {
           return i===1 || i===3 || i===6 || i===8 || i===10 ?
