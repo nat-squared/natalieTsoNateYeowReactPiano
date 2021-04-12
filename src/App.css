@@ -58,12 +58,6 @@ ul {
   position: relative;
   background-color: #000;
   border-radius: 22px;
-
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 ul div{
   height: 10px;
@@ -130,3 +124,12 @@ ul li:last-child {
   border-radius: 0 0 5px 5px;
 }
 
+@media (max-width: 600px){
+  * {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+}
