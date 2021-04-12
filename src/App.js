@@ -65,21 +65,34 @@ function App() {
   // RETURN ==========================================
   return (
     <div className="App">
-      <h1>Piano</h1>
+      <header>
+        <h1>Pia<span>n</span>&sup2;o</h1>
+      </header>
 
-      <ul>
-        {one.map( (note, i) => {
-          return i===1 || i===3 || i===6 || i===8 || i===10 ?
-            <BlackKey keybinding={keybindings[i]}
-                      key={i}
-                      note={note} />
-          :
-            <WhiteKey keybinding={keybindings[i]}
-                      key={i} 
-                      note={note} />
-        })}
-      </ul>
+      <main>
+        <div className="wrapper">
+          <p> Please use your mouse to click on the keys or use your keyboard with the letters shown to play the pian&sup2;o </p>
+        </div>
+        <ul>
+          <div></div>
+          {one.map( (note, i) => {
+            return i===1 || i===3 || i===6 || i===8 || i===10 ?
+              <BlackKey keybinding={keybindings[i]}
+                        key={i}
+                        note={note} />
+            :
+              <WhiteKey keybinding={keybindings[i]}
+                        key={i} 
+                        note={note} />
+          })}
+        </ul>
+      </main>
+
+      <footer>
+        <h3>Created by <a href="https://github.com/midnightorca" target="_blank">Natalie Tso</a> and <a href="https://github.com/NateY98" target="_blank">Nate Yeow</a> at <a href="https://junocollege.com/" target="_blank">Juno College</a></h3>
+      </footer>
     </div>
+
   );
 }
 export default App;
