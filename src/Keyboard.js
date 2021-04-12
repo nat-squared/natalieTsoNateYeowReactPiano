@@ -56,6 +56,15 @@ function Keyboard(props) {
         console.log(e);
     }
 
+    function onTouchStart() {
+        playMusic();
+    }
+
+    function onTouchEnd() {
+        stopAndReset();
+    }
+
+
     return (
         <li
             className={ className }
@@ -64,6 +73,8 @@ function Keyboard(props) {
             onMouseUp={onMouseUp}
             onKeyDown={onKeyDown}
             onKeyUp={onKeyUp}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
         >
             {keybinding.toUpperCase()}
         </li>
