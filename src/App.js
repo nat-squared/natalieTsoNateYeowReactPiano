@@ -89,7 +89,7 @@ function App() {
       </main>
 
       <footer>
-        <h3>Created by <a href="https://github.com/midnightorca" target="_blank">Natalie Tso</a> and <a href="https://github.com/NateY98" target="_blank">Nate Yeow</a> at <a href="https://junocollege.com/" target="_blank">Juno College</a></h3>
+        <h3>Created by <a href="https://github.com/midnightorca" target="_blank" rel="noreferrer">Natalie Tso</a> and <a href="https://github.com/NateY98" target="_blank" rel="noreferrer">Nate Yeow</a> at <a href="https://junocollege.com/" target="_blank" rel="noreferrer">Juno College</a></h3>
       </footer>
     </div>
 
