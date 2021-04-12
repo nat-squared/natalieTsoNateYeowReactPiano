@@ -19,6 +19,7 @@ const keybindings = [
   "k",
 ];
 
+
 function App() {
 
   const [one, setOne] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   useEffect( () => {
     async function fetchMyFirebase() {
       const storage = firebase.storage();
-      
+
       const files = [
         "C4.mp3",
         "Csharp4.mp3",
@@ -43,9 +44,9 @@ function App() {
         "B4.mp3",
         "C5.mp3"
       ];
-      
+
       const filesUrls = [];
-      
+
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const url = await storage
@@ -60,7 +61,7 @@ function App() {
     };
     fetchMyFirebase();
   }, []);
-  
+
   // RETURN ==========================================
   return (
     <div className="App">
@@ -81,5 +82,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
