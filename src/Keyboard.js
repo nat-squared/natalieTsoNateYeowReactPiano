@@ -56,11 +56,11 @@ function Keyboard(props) {
         console.log(e);
     }
 
-    function onTouchStart() {
+    function onTouchStart(e) {
         playMusic();
     }
 
-    function onTouchEnd() {
+    function onTouchEnd(e) {
         stopAndReset();
     }
 
