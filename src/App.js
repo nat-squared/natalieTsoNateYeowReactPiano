@@ -1,17 +1,33 @@
 import './App.css';
 import firebase from "./firebase.js";
 import { useState, useEffect } from "react";
-import Keyboard from "./Keyboard.js"
-// import Instrument from "./Instrument.js"
+import { BlackKey, WhiteKey } from "./Keyboard.js"
+
+const keybindings = [
+  "a",
+  "w",
+  "s",
+  "e",
+  "d",
+  "f",
+  "t",
+  "g",
+  "y",
+  "h",
+  "u",
+  "j",
+  "k",
+];
 
 function App() {
 
   const [one, setOne] = useState([]);
 
+  
   useEffect( () => {
     async function fetchMyFirebase() {
       const storage = firebase.storage();
-
+      
       const files = [
         "C4.mp3",
         "Csharp4.mp3",
@@ -27,40 +43,40 @@ function App() {
         "B4.mp3",
         "C5.mp3"
       ];
-
+      
       const filesUrls = [];
-
+      
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const url = await storage
-          .ref(`/${file}`)
-          .getDownloadURL();
+        .ref(`/${file}`)
+        .getDownloadURL();
         filesUrls.push({
           key: file.slice(0, -4),
           url: url
         });
       }
-
-      console.log(filesUrls);
       setOne(filesUrls);
     };
     fetchMyFirebase();
   }, []);
-
-
+  
+  // RETURN ==========================================
   return (
     <div className="App">
-      <h1>hello</h1>
+      <h1>Piano</h1>
 
       <ul>
         {one.map( (note, i) => {
-          return i===1 || i===3 || i===6 || i===8 || i===10 ? <Keyboard class="blackKey" key={i} note={note} /> : <Keyboard class="whiteKey" key={i} note={note} />
-
-    
+          return i===1 || i===3 || i===6 || i===8 || i===10 ?
+            <BlackKey keybinding={keybindings[i]}
+                      key={i}
+                      note={note} />
+          :
+            <WhiteKey keybinding={keybindings[i]}
+                      key={i} 
+                      note={note} />
         })}
-        {/* {one.map( (note, i) => {
-          return <Keyboard key={i} note={note} />
-        })} */}
       </ul>
     </div>
   );
