@@ -9,6 +9,7 @@ const useAudio = url => {
 
     
 
+
     const playMusic = () => {
         setPlaying(true);
     };
@@ -17,18 +18,11 @@ const useAudio = url => {
     };
 
     useEffect(() => {
-        // playing ? 
-        //     audio.play() 
-        //     :
-        //     audio.pause()
-        //     setAudio(audio.currentTime = 0) 
-        if (playing) {
-            audio.play();
-        } else {
-            audio.pause();
-            audio.currentTime = 0;
-
-        }
+        playing ? 
+            audio.play() 
+            :
+            audio.pause()
+            audio.currentTime = 0 
     }, [playing, audio] );
 
 
@@ -40,6 +34,12 @@ function Keyboard(props) {
 
     const [playMusic, stopAndReset] = useAudio(note.url);
 
+
+    useEffect( () => {
+        window.addEventListener("keydown", onKeyDown);
+        window.addEventListener("keyup", onKeyUp);
+    }, [onKeyDown, onKeyUp])
+
     function onMouseDown(e) {
         playMusic();
     };
@@ -49,11 +49,15 @@ function Keyboard(props) {
     }
 
     function onKeyDown(e) {
-        console.log(e);
+        if(e.key === keybinding){
+            playMusic()
+        }
     }
 
     function onKeyUp(e) {
-        console.log(e);
+        if(e.key === keybinding){
+            stopAndReset();
+        }
     }
 
     function onTouchStart(e) {
