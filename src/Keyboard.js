@@ -2,12 +2,9 @@ import React, { useState, useEffect } from "react";
 
 // based on https://www.codegrepper.com/code-examples/javascript/react+play+audio+from+url
 const useAudio = url => {
-    
 
     const [audio] = useState(new Audio(url));
     const [playing, setPlaying] = useState(false);
-
-    
 
     const playMusic = () => {
         setPlaying(true);
@@ -84,7 +81,7 @@ function Keyboard(props) {
 function BlackKey(props) {
     return <Keyboard 
                 keybinding={props.keybinding}
-                className="blackKey"
+                className="blackKey "
                 note={props.note} />;
 }
 
