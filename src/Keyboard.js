@@ -45,10 +45,12 @@ function Keyboard(props) {
     // event listener functions for touch screens
     function onTouchStart(e) {
         playMusic();
+        setPlaying(true);
     }
 
     function onTouchEnd(e) {
         stopAndReset();
+        setPlaying(false);
     }
 
     return (
