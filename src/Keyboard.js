@@ -15,7 +15,7 @@ function Keyboard(props) {
         // adding event listeners for playing piano with keyboard
         window.addEventListener("keydown", onKeyDown);
         window.addEventListener("keyup", onKeyUp);
-    }, [onKeyDown, onKeyUp] )
+    })
 
     function onMouseDown(e) {
         playMusic();
@@ -58,8 +58,8 @@ function Keyboard(props) {
             id={ note.key }
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
-            onKeyDown={onKeyDown}
-            onKeyUp={onKeyUp}
+            onKeyDown={() => onKeyDown()}
+            onKeyUp={() => onKeyUp()}
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
         >
@@ -88,3 +88,4 @@ export {
     WhiteKey,
     BlackKey
 };
+    
