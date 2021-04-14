@@ -4,8 +4,6 @@ import firebase from "./firebase.js";
 import { keybindings, files } from "./constants.js"
 import { useState, useEffect } from "react";
 import { BlackKey, WhiteKey } from "./Keyboard.js";
-// import UseAudio from "./UseAudio.js";
-
 
 function App() {
   const [pianoKey, setPianoKey] = useState([]);
@@ -70,4 +68,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
