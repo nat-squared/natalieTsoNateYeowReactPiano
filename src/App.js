@@ -19,12 +19,9 @@ const keybindings = [
   "k",
 ];
 
-
 function App() {
-
   const [one, setOne] = useState([]);
 
-  
   useEffect( () => {
     async function fetchMyFirebase() {
       const storage = firebase.storage();
@@ -92,7 +89,6 @@ function App() {
         <h3>Created by <a href="https://github.com/midnightorca" target="_blank" rel="noreferrer">Natalie Tso</a> and <a href="https://github.com/NateY98" target="_blank" rel="noreferrer">Nate Yeow</a> at <a href="https://junocollege.com/" target="_blank" rel="noreferrer">Juno College</a></h3>
       </footer>
     </div>
-
   );
 }
 export default App;

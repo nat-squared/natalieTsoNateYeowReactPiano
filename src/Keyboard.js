@@ -2,43 +2,39 @@ import React, { useState, useEffect } from "react";
 
 // based on https://www.codegrepper.com/code-examples/javascript/react+play+audio+from+url
 const useAudio = url => {
-    
 
     const [audio] = useState(new Audio(url));
     const [playing, setPlaying] = useState(false);
 
-    
-
-
     const playMusic = () => {
         setPlaying(true);
     };
+
     const stopAndReset = () => {
         setPlaying(false);
     };
 
     useEffect(() => {
         playing ? 
-            audio.play() 
+            audio.play()
             :
             audio.pause()
-            audio.currentTime = 0 
+            audio.currentTime = 0
     }, [playing, audio] );
-
 
     return [playMusic, stopAndReset];
 };
 
+
 function Keyboard(props) {
     const {note, className, keybinding} = props
-
+    
     const [playMusic, stopAndReset] = useAudio(note.url);
-
 
     useEffect( () => {
         window.addEventListener("keydown", onKeyDown);
         window.addEventListener("keyup", onKeyUp);
-    }, [onKeyDown, onKeyUp])
+    }, [onKeyDown, onKeyUp] )
 
     function onMouseDown(e) {
         playMusic();
@@ -68,10 +64,9 @@ function Keyboard(props) {
         stopAndReset();
     }
 
-
     return (
         <li
-            className={ className }
+            className={ `${className} ${keyPlaying ? "playing" : ""}`}
             id={ note.key }
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
