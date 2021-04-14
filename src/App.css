@@ -7,6 +7,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 body {
   margin: 0;
 }
+
 h1 {
   text-align: center;
   color: #000;
@@ -17,6 +18,7 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 3px;
 }
+
 h1 span{
   background-color: #fff;
   letter-spacing: 0;
@@ -28,28 +30,34 @@ footer{
   width: 100%;
   padding: 25px;
 }
+
 h3{
   background-color: #ffffff;
   text-align: center;
 }
+
 p{
   text-align: center;
   color: #bbb;
   padding-top: 40px;
 }
+
 .wrapper{
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
 }
+
 a{
   cursor: pointer;
   text-decoration: none;
   color: #000;
 }
+
 a:hover{
   color: #c02525;
 }
+
 ul {
   height: 18.875em;
   width: 30em;
@@ -59,10 +67,12 @@ ul {
   background-color: #000;
   border-radius: 22px;
 }
+
 ul div{
   height: 10px;
   background-color: #c02525;
 }
+
 li {
   margin: 0;
   padding: 0;
@@ -80,6 +90,7 @@ li {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
+
 .whiteKey {
   height: 16em;
   width: 3em;
@@ -89,6 +100,7 @@ li {
   border-radius: 0 0 5px 5px;
   background: linear-gradient(to bottom, #eee 0%, #fff 100%);
 }
+
 .whiteKey:active {
   background: linear-gradient(
     to right,
@@ -96,6 +108,11 @@ li {
     rgb(206, 204, 204) 100%
   );
 }
+
+.whiteKey.playing {
+  background: #c02525;
+}
+
 .blackKey {
   height: 10em;
   width: 2em;
@@ -106,9 +123,11 @@ li {
   color: white;
   background: #444;
 }
+
 .blackKey:active {
   background: linear-gradient(to right, #444 0%, #222 100%);
 }
+
 #D4,
 #E4,
 #G4,
@@ -116,6 +135,7 @@ li {
 #B4 {
   margin: 0 0 0 -1em;
 }
+
 ul li:first-child {
   border-radius: 5px 0 5px 5px;
 }
