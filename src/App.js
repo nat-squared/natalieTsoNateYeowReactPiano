@@ -1,60 +1,34 @@
 import './App.css';
 import firebase from "./firebase.js";
-import { useState, useEffect } from "react";
-import { BlackKey, WhiteKey } from "./Keyboard.js"
 
-const keybindings = [
-  "a",
-  "w",
-  "s",
-  "e",
-  "d",
-  "f",
-  "t",
-  "g",
-  "y",
-  "h",
-  "u",
-  "j",
-  "k",
-];
+import { keybindings, files } from "./constants.js"
+import { useState, useEffect } from "react";
+import { BlackKey, WhiteKey } from "./Keyboard.js";
+// import UseAudio from "./UseAudio.js";
+
 
 function App() {
-  const [one, setOne] = useState([]);
+  const [pianoKey, setPianoKey] = useState([]);
 
   useEffect( () => {
     async function fetchMyFirebase() {
       const storage = firebase.storage();
 
-      const files = [
-        "C4.mp3",
-        "Csharp4.mp3",
-        "D4.mp3",
-        "Dsharp4.mp3",
-        "E4.mp3",
-        "F4.mp3",
-        "Fsharp4.mp3",
-        "G4.mp3",
-        "Gsharp4.mp3",
-        "A4.mp3",
-        "Asharp4.mp3",
-        "B4.mp3",
-        "C5.mp3"
-      ];
-
       const filesUrls = [];
 
+      // For loop to get download URL from firebase storage for each note
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const url = await storage
         .ref(`/${file}`)
         .getDownloadURL();
+        // Push data from firebase to an array to be used in setPianoKey
         filesUrls.push({
           key: file.slice(0, -4),
           url: url
         });
       }
-      setOne(filesUrls);
+      setPianoKey(filesUrls);
     };
     fetchMyFirebase();
   }, []);
@@ -68,11 +42,14 @@ function App() {
 
       <main>
         <div className="wrapper">
-          <p> Please use your mouse to click on the keys or use your keyboard with the letters shown to play the pian&sup2;o </p>
+          <p> Please use your mouse to click on the keys or 
+            use your keyboard with the letters shown to play the pian&sup2;o </p>
         </div>
         <ul>
           <div></div>
-          {one.map( (note, i) => {
+          {/* map through array to display keys on dom */}
+          {pianoKey.map( (note, i) => {
+            // ternary operator to display white or black keys
             return i===1 || i===3 || i===6 || i===8 || i===10 ?
               <BlackKey keybinding={keybindings[i]}
                         key={i}
