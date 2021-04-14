@@ -42,8 +42,10 @@ function App() {
 
       <main>
         <div className="wrapper">
-          <p> Please use your mouse to click on the keys or 
+          <p className="computerInstructions"> Please use your mouse to click on the keys or 
             use your keyboard with the letters shown to play the pian&sup2;o </p>
+
+            <p className="mobileInstructions"> For best experience, please rotate mobile device into landscape mode </p>
         </div>
         <ul>
           <div></div>
