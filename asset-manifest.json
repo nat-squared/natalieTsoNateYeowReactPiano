@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/reactPiano/static/css/main.eebb541f.chunk.css",
-    "main.js": "/reactPiano/static/js/main.278ab99c.chunk.js",
-    "main.js.map": "/reactPiano/static/js/main.278ab99c.chunk.js.map",
-    "runtime-main.js": "/reactPiano/static/js/runtime-main.96a26c5f.js",
-    "runtime-main.js.map": "/reactPiano/static/js/runtime-main.96a26c5f.js.map",
-    "static/js/2.83bd29f5.chunk.js": "/reactPiano/static/js/2.83bd29f5.chunk.js",
-    "static/js/2.83bd29f5.chunk.js.map": "/reactPiano/static/js/2.83bd29f5.chunk.js.map",
-    "static/js/3.c6506217.chunk.js": "/reactPiano/static/js/3.c6506217.chunk.js",
-    "static/js/3.c6506217.chunk.js.map": "/reactPiano/static/js/3.c6506217.chunk.js.map",
-    "index.html": "/reactPiano/index.html",
-    "static/css/main.eebb541f.chunk.css.map": "/reactPiano/static/css/main.eebb541f.chunk.css.map",
-    "static/js/2.83bd29f5.chunk.js.LICENSE.txt": "/reactPiano/static/js/2.83bd29f5.chunk.js.LICENSE.txt"
+    "main.css": "/natalieTsoNateYeowReactPiano/static/css/main.5c6c5788.chunk.css",
+    "main.js": "/natalieTsoNateYeowReactPiano/static/js/main.71954d3d.chunk.js",
+    "main.js.map": "/natalieTsoNateYeowReactPiano/static/js/main.71954d3d.chunk.js.map",
+    "runtime-main.js": "/natalieTsoNateYeowReactPiano/static/js/runtime-main.8c0c594f.js",
+    "runtime-main.js.map": "/natalieTsoNateYeowReactPiano/static/js/runtime-main.8c0c594f.js.map",
+    "static/js/2.83bd29f5.chunk.js": "/natalieTsoNateYeowReactPiano/static/js/2.83bd29f5.chunk.js",
+    "static/js/2.83bd29f5.chunk.js.map": "/natalieTsoNateYeowReactPiano/static/js/2.83bd29f5.chunk.js.map",
+    "static/js/3.c6506217.chunk.js": "/natalieTsoNateYeowReactPiano/static/js/3.c6506217.chunk.js",
+    "static/js/3.c6506217.chunk.js.map": "/natalieTsoNateYeowReactPiano/static/js/3.c6506217.chunk.js.map",
+    "index.html": "/natalieTsoNateYeowReactPiano/index.html",
+    "static/css/main.5c6c5788.chunk.css.map": "/natalieTsoNateYeowReactPiano/static/css/main.5c6c5788.chunk.css.map",
+    "static/js/2.83bd29f5.chunk.js.LICENSE.txt": "/natalieTsoNateYeowReactPiano/static/js/2.83bd29f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.96a26c5f.js",
+    "static/js/runtime-main.8c0c594f.js",
     "static/js/2.83bd29f5.chunk.js",
-    "static/css/main.eebb541f.chunk.css",
-    "static/js/main.278ab99c.chunk.js"
+    "static/css/main.5c6c5788.chunk.css",
+    "static/js/main.71954d3d.chunk.js"
   ]
 }
