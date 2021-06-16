@@ -78,7 +78,7 @@ ul div{
   width: 480px;
 }
 
-li {
+button {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -129,11 +129,11 @@ li {
   background: linear-gradient(to right, #444 0%, #222 100%);
 }
 
-#D4,
-#E4,
-#G4,
-#A4,
-#B4 {
+.D4,
+.E4,
+.G4,
+.A4,
+.B4 {
   margin: 0 0 0 -1em;
 }
 
