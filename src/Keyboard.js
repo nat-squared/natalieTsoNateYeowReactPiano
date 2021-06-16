@@ -54,9 +54,9 @@ function Keyboard(props) {
     }
 
     return (
-        <li
+        <button
             // ternary operator checking playing state to toggle css playing class
-            className={ `${className} ${playing ? "playing" : ""}`}
+            className={ `${className} ${note.key} ${playing ? "playing" : ""}`}
             id={ note.key }
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
@@ -66,7 +66,7 @@ function Keyboard(props) {
             onTouchEnd={onTouchEnd}
         >
             {keybinding.toUpperCase()}
-        </li>
+        </button>
     )
 }
 
