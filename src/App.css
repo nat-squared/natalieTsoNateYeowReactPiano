@@ -20,49 +20,50 @@ h1 {
   letter-spacing: 3px;
 }
 
-h1 span{
+h1 span {
   background-color: #fff;
   letter-spacing: 0;
 }
-footer{
+
+footer {
   background-color: #ffffff;
   width: 100%;
   padding: 25px;
   margin-top: 50px;
 }
 
-h3{
+h3 {
   background-color: #ffffff;
   text-align: center;
 }
 
-p{
+p {
   text-align: center;
   color: #bbb;
   padding-top: 40px;
 }
 
-.mobileInstructions{
+.mobileInstructions {
   display: none;
 }
 
-.wrapper{
+.wrapper {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
 }
 
-a{
+a {
   cursor: pointer;
   text-decoration: none;
   color: #000;
 }
 
-a:hover{
+a:hover {
   color: #c02525;
 }
 
-ul {
+.keyboard {
   height: 18.875em;
   width: 548px;
   margin: 6% auto;
@@ -72,7 +73,7 @@ ul {
   border-radius: 22px;
 }
 
-ul div{
+.keyboard div {
   height: 10px;
   background-color: #c02525;
   width: 480px;
@@ -145,7 +146,7 @@ ul li:last-child {
   border-radius: 0 0 5px 5px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   * {
     user-select: none; /* supported by Chrome and Opera */
     -webkit-user-select: none; /* Safari */
@@ -154,11 +155,11 @@ ul li:last-child {
     -ms-user-select: none; /* Internet Explorer/Edge */
   }
 
-  .computerInstructions{
+  .computerInstructions {
     display: none;
   }
 
-  .mobileInstructions{
+  .mobileInstructions {
     display: block;
     text-align: center;
     color: #eee;
