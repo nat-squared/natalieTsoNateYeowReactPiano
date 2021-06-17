@@ -45,7 +45,7 @@ function App() {
 
             <p className="mobileInstructions"> For best experience, please rotate mobile device into landscape mode </p>
         </div>
-        <ul>
+        <div className="keyboard">
           <div></div>
           {/* map through array to display keys on dom */}
           {pianoKey.map( (note, i) => {
@@ -59,7 +59,7 @@ function App() {
                         key={i} 
                         note={note} />
           })}
-        </ul>
+        </div>
       </main>
 
       <footer>
