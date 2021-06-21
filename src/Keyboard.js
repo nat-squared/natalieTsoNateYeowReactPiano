@@ -29,14 +29,15 @@ function Keyboard(props) {
 
     function onKeyDown(e) {
         // if statement to target the audio of key pressed down
-        if(e.key === keybinding){
+        // specific keybinding event or tab selected enter
+        if(e instanceof KeyboardEvent && (e.key === keybinding || (e.key === "Enter" && e.target.dataset.note === note.key))){
             playMusic();
             setPlaying(true);
         }
     }
 
     function onKeyUp(e) {
-        if(e.key === keybinding){
+        if(e instanceof KeyboardEvent && (e.key === keybinding || (e.key === "Enter" && e.target.dataset.note === note.key))){
             stopAndReset();
             setPlaying(false);
         }
@@ -64,6 +65,7 @@ function Keyboard(props) {
             onKeyUp={() => onKeyUp()}
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
+            data-note={note.key}
         >
             {keybinding.toUpperCase()}
         </button>
