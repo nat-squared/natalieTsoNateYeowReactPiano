@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/reactPiano/static/css/main.11f02cf0.chunk.css",
-    "main.js": "/reactPiano/static/js/main.03a2e4fb.chunk.js",
-    "main.js.map": "/reactPiano/static/js/main.03a2e4fb.chunk.js.map",
+    "main.js": "/reactPiano/static/js/main.da7776ca.chunk.js",
+    "main.js.map": "/reactPiano/static/js/main.da7776ca.chunk.js.map",
     "runtime-main.js": "/reactPiano/static/js/runtime-main.96a26c5f.js",
     "runtime-main.js.map": "/reactPiano/static/js/runtime-main.96a26c5f.js.map",
-    "static/js/2.83bd29f5.chunk.js": "/reactPiano/static/js/2.83bd29f5.chunk.js",
-    "static/js/2.83bd29f5.chunk.js.map": "/reactPiano/static/js/2.83bd29f5.chunk.js.map",
+    "static/js/2.fa896aaa.chunk.js": "/reactPiano/static/js/2.fa896aaa.chunk.js",
+    "static/js/2.fa896aaa.chunk.js.map": "/reactPiano/static/js/2.fa896aaa.chunk.js.map",
     "static/js/3.c6506217.chunk.js": "/reactPiano/static/js/3.c6506217.chunk.js",
     "static/js/3.c6506217.chunk.js.map": "/reactPiano/static/js/3.c6506217.chunk.js.map",
     "index.html": "/reactPiano/index.html",
     "static/css/main.11f02cf0.chunk.css.map": "/reactPiano/static/css/main.11f02cf0.chunk.css.map",
-    "static/js/2.83bd29f5.chunk.js.LICENSE.txt": "/reactPiano/static/js/2.83bd29f5.chunk.js.LICENSE.txt"
+    "static/js/2.fa896aaa.chunk.js.LICENSE.txt": "/reactPiano/static/js/2.fa896aaa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.96a26c5f.js",
-    "static/js/2.83bd29f5.chunk.js",
+    "static/js/2.fa896aaa.chunk.js",
     "static/css/main.11f02cf0.chunk.css",
-    "static/js/main.03a2e4fb.chunk.js"
+    "static/js/main.da7776ca.chunk.js"
   ]
 }
