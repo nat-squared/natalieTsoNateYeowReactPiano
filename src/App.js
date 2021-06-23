@@ -56,43 +56,25 @@ function App() {
 
             <p className="mobileInstructions"> For best experience, please rotate mobile device into landscape mode </p>
         </div>
-
-        {isMobile ? 
-        (<div className="keyboard">
-            <div></div>
-            {/* map through array to display keys on dom */}
-            {pianoKey.map( (note, i) => {
-              if (i <= 12) {
+        <div className="keyboard">
+          <div id="redFelt"></div>
+          {/* map through array to display keys on dom */}
+            {
+              pianoKey.map( (note, i) => {
+                if (!isMobile || (isMobile && i <= 12)) {
+                  return i===1 || i===3 || i===6 || i===8 || i===10 || i===13 || i===15 ||i===18 || i===20 || i===22 ?
+                  <BlackKey keybinding={keybindings[i]}
+                  key={i}
+                  note={note} />
+                  :
+                  <WhiteKey keybinding={keybindings[i]}
+                  key={i} 
+                  note={note} />
+                }
                 // ternary operator to display white or black keys
-                return i===1 || i===3 || i===6 || i===8 || i===10 ?
-                <BlackKey keybinding={keybindings[i]}
-                key={i}
-                note={note} />
-                :
-                <WhiteKey keybinding={keybindings[i]}
-                key={i} 
-                note={note} />
-              }
-            })}
+              })
+          }
           </div>
-          ) : (
-          <div className="keyboard">
-            <div></div>
-            {/* map through array to display keys on dom */}
-            {pianoKey.map( (note, i) => {
-              // ternary operator to display white or black keys
-              return i===1 || i===3 || i===6 || i===8 || i===10 || i===13 || i===15 ||i===18 || i===20 || i===22 ?
-              <BlackKey keybinding={keybindings[i]}
-              key={i}
-              note={note} />
-              :
-              <WhiteKey keybinding={keybindings[i]}
-              key={i} 
-              note={note} />
-            })}
-          </div>
-          )
-        }
       </main>
 
       <footer>
