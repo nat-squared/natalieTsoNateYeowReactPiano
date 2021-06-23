@@ -71,6 +71,7 @@ function App() {
                   key={i} 
                   note={note} />
                 }
+                return <></>;
                 // ternary operator to display white or black keys
               })
           }
