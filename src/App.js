@@ -31,7 +31,18 @@ function App() {
     fetchMyFirebase();
   }, []);
 
-  // RETURN ==========================================
+  const [isMobile, setMobile] = useState(window.innerWidth <= 984);
+
+  const updateKeyboard = () => {
+    setMobile(window.innerWidth <= 984);
+  };
+
+  useEffect( () => {
+    window.addEventListener("resize", updateKeyboard);
+    return () => window.removeEventListener("resize", updateKeyboard);
+  });
+
+    // RETURN ==========================================
   return (
     <div className="App">
       <header>
@@ -45,21 +56,43 @@ function App() {
 
             <p className="mobileInstructions"> For best experience, please rotate mobile device into landscape mode </p>
         </div>
-        <div className="keyboard">
-          <div></div>
-          {/* map through array to display keys on dom */}
-          {pianoKey.map( (note, i) => {
-            // ternary operator to display white or black keys
-            return i===1 || i===3 || i===6 || i===8 || i===10 ?
+
+        {isMobile ? 
+        (<div className="keyboard">
+            <div></div>
+            {/* map through array to display keys on dom */}
+            {pianoKey.map( (note, i) => {
+              if (i <= 12) {
+                // ternary operator to display white or black keys
+                return i===1 || i===3 || i===6 || i===8 || i===10 ?
+                <BlackKey keybinding={keybindings[i]}
+                key={i}
+                note={note} />
+                :
+                <WhiteKey keybinding={keybindings[i]}
+                key={i} 
+                note={note} />
+              }
+            })}
+          </div>
+          ) : (
+          <div className="keyboard">
+            <div></div>
+            {/* map through array to display keys on dom */}
+            {pianoKey.map( (note, i) => {
+              // ternary operator to display white or black keys
+              return i===1 || i===3 || i===6 || i===8 || i===10 || i===13 || i===15 ||i===18 || i===20 || i===22 ?
               <BlackKey keybinding={keybindings[i]}
-                        key={i}
-                        note={note} />
-            :
+              key={i}
+              note={note} />
+              :
               <WhiteKey keybinding={keybindings[i]}
-                        key={i} 
-                        note={note} />
-          })}
-        </div>
+              key={i} 
+              note={note} />
+            })}
+          </div>
+          )
+        }
       </main>
 
       <footer>

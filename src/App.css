@@ -65,7 +65,7 @@ a:hover {
 
 .keyboard {
   height: 18.875em;
-  width: 548px;
+  width: 970px;
   margin: 6% auto;
   padding: 60px 34px 0;
   position: relative;
@@ -76,7 +76,7 @@ a:hover {
 .keyboard div {
   height: 10px;
   background-color: #c02525;
-  width: 480px;
+  width: 900px;
 }
 
 button {
@@ -130,6 +130,12 @@ button {
   background: linear-gradient(to right, #444 0%, #222 100%);
 }
 
+
+.D3,
+.E3,
+.G3,
+.A3,
+.B3,
 .D4,
 .E4,
 .G4,
@@ -144,6 +150,16 @@ ul li:first-child {
 
 ul li:last-child {
   border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 984px) {
+  .keyboard {
+    width: 548px;
+  }
+  
+  .keyboard div {
+    width: 480px;
+  }
 }
 
 @media (max-width: 600px) {
